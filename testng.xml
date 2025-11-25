@@ -1,0 +1,14 @@
+<suite name="Calculator Suite">
+    <test name="Calculator Tester">
+        <groups>
+            <run>
+                <include name="BasicOperations"/>
+                <include name="AdvancedOperations"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="org.example.CalculatorTester"/>
+        </classes>
+    </test>
+
+</suite>

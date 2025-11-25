@@ -6,19 +6,19 @@ import org.testng.annotations.Test;
 public class CalculatorTester {
     Calculator calculator=new Calculator();
 
-    @Test(priority = 1)
+    @Test(groups = "BasicOperations")
     public void testAdd(){
         Assert.assertEquals(calculator.add(3,2),5);
     }
-    @Test(priority = 3, dependsOnMethods = {"testAdd","testDivide"})
+    @Test(groups = "BasicOperations")
     public void testSubstract(){
         Assert.assertEquals(calculator.subtract(3,2),1);
     }
-    @Test(priority = 4)
+    @Test(groups = "AdvancedOperations")
     public void testMultiply(){
         Assert.assertEquals(calculator.multiply(3,2),6);
     }
-    @Test(priority = 5)
+    @Test(groups = "AdvancedOperations")
     public void testDivide(){
        Assert.assertEquals(calculator.divide(3,2),1.5);
     }
